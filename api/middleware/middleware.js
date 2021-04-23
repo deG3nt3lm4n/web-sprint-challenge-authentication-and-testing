@@ -5,9 +5,9 @@ async function usernameCheck(req,res,next){
   try {
     const usernameB = await Jokes.findBy({username: username})
     if(!usernameB){
-      next({status: 401, message: 'username taken'})
-    }else{
       next()
+    }else{
+      next({status: 401, message: 'username taken'})
     }
   } catch (err) {
     next(err)
