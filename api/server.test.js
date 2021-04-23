@@ -1,4 +1,7 @@
-// Write your tests here
+const superTest = require('supertest')
+const server = require('./server');
+const db = require('../data/dbConfig');
+
 test('sanity', () => {
-  expect(true).toBe(false)
+  expect(true).toBe(true)
 })
